@@ -37,7 +37,7 @@ td {
   display: flex;
   gap: 2em;
   justify-content: center;
-  margin-bottom: 8em;
+  margin-bottom: 3em;
 }
 
 form td:last-child {

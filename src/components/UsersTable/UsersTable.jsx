@@ -60,16 +60,17 @@ const UsersTable = ({users, setUsers}) => {
 
   const handleEditFormSubmit = (event) => {
     event.preventDefault();
+    const index = users.findIndex((user) => user.id === editUserId);
 
     const editedUser = {
       id: editUserId,
       firstName: editFormData.firstName,
       lastName: editFormData.lastName,
+      expenses: users[index].expenses
     };
 
     const newUsers = [...users];
 
-    const index = users.findIndex((user) => user.id === editUserId);
 
     newUsers[index] = editedUser;
 
