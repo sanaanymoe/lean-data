@@ -74,7 +74,7 @@ const ExpensesTable = ({ users, setUsers }) => {
   };
 
   return (
-    <div>
+    <div className="expense-table">
       <h1>Expenses Table</h1>
       <table>
         <thead>
