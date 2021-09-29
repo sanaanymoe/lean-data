@@ -10,9 +10,13 @@ table {
   width: 100%;
 }
 
+h2{
+  margin-top: 6em;
+}
+
 th,
 td {
-  border: 1px solid #ffffff;
+  border: 1px solid black;
   text-align: center;
   padding: 8px;
   font-size: 32px;
@@ -26,11 +30,11 @@ td {
   background-color: rgb(205, 235, 253);
 }
 
-form {
+.add-user-form {
   display: flex;
   gap: 2em;
   justify-content: center;
-  margin-bottom: 3em;
+  margin-bottom: 8em;
 }
 
 form td:last-child {

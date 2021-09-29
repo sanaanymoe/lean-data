@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './ExpensesTable.styles.css'
 
 import ExpenseReadOnlyRow from "../ExpenseReadOnlyRow/ExpenseReadOnlyRow";
 
@@ -74,6 +75,7 @@ const ExpensesTable = ({ users, setUsers }) => {
 
   return (
     <div>
+      <h1>Expenses Table</h1>
       <table>
         <thead>
           <tr>
@@ -91,7 +93,7 @@ const ExpensesTable = ({ users, setUsers }) => {
       </table>
       <h2>Add Expense</h2>
 
-      <form onSubmit={handleAddExpenseSubmit}>
+      <form className="expense-form" onSubmit={handleAddExpenseSubmit}>
         <select defaultValue="DEFAULT" onChange={handleSelectUser}>
           <option value="DEFAULT" disabled>
             Select a user

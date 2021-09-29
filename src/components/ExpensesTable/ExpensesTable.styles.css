@@ -1,0 +1,6 @@
+.expense-form {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  margin-bottom: 8em;
+}

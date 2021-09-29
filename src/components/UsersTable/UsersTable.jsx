@@ -105,6 +105,7 @@ const UsersTable = ({users, setUsers}) => {
 
   return (
     <div className="users-table">
+      <h1>Users Table</h1>
       <form onSubmit={handleEditFormSubmit}>
         <table>
           <thead>
@@ -136,9 +137,9 @@ const UsersTable = ({users, setUsers}) => {
           </tbody>
         </table>
       </form>
-
+      
       <h2>Add a User</h2>
-      <form onSubmit={handleAddFormSubmit}>
+      <form className="add-user-form" onSubmit={handleAddFormSubmit}>
         <input
           type="text"
           name="firstName"
