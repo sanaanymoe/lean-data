@@ -56,12 +56,20 @@ const UsersTable = ({users, setUsers}) => {
 
     const newUsers = [...users, newUser];
     setUsers(newUsers);
+    setAddFormData({
+      firstName: "",
+      lastName: ""
+    })
   };
 
   const handleEditFormSubmit = (event) => {
     event.preventDefault();
     const index = users.findIndex((user) => user.id === editUserId);
 
+    for(let expense of users[index].expenses){
+      expense.fullName = `${editFormData.firstName} ${editFormData.lastName}`;
+    }
+    
     const editedUser = {
       id: editUserId,
       firstName: editFormData.firstName,
@@ -138,12 +146,13 @@ const UsersTable = ({users, setUsers}) => {
           </tbody>
         </table>
       </form>
-      
+
       <h2>Add a User</h2>
       <form className="add-user-form" onSubmit={handleAddFormSubmit}>
         <input
           type="text"
           name="firstName"
+          value={addFormData.firstName}
           required="required"
           placeholder="First name"
           onChange={handleAddFormChange}
@@ -151,6 +160,7 @@ const UsersTable = ({users, setUsers}) => {
         <input
           type="text"
           name="lastName"
+          value={addFormData.lastName}
           required="required"
           placeholder="Last name"
           onChange={handleAddFormChange}

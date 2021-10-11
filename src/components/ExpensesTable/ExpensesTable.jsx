@@ -9,6 +9,8 @@ const ExpensesTable = ({ users, setUsers }) => {
   const [expenses, setExpenses] = useState([]);
   const [index, setIndex] = useState(undefined);
 
+  // expenses = [{useId: [], }]
+
   const [addFormData, setAddFormData] = useState({
     fullName: "",
     category: "",

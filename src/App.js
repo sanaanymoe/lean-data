@@ -9,7 +9,7 @@ import './App.css';
 function App() {
   const [users, setUsers] = useState([]);
 
-  console.log(users)
+  // console.log(users)
   return (
     <div className="App">
       <UsersTable users={users} setUsers={setUsers} />
